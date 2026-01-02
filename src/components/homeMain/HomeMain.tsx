@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function HomeMain() {
   return (
     <section
-      id="recent-picture"
+      id="recent-pictures"
       className="w-full px-4 md:px-8 py-20 bg-[#0a0a0a]"
     >
       <Masonry
