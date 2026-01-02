@@ -8,7 +8,13 @@ export default function SocialMedia() {
 
       <div className="flex flex-row items-center justify-center gap-5">
         {socialMedia.map(({ name, link, svgPath }) => (
-          <a href={link} key={name} target="_blank" rel="noopener noreferrer">
+          <a
+            href={link}
+            key={name}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit Fabian's ${name} profile`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

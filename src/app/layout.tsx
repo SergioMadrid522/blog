@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Silent Beauty | Photography by Fabian",
     description:
       "Capturing the world's silent moments. A visual journey through light and shadow.",
-    url: "https://fabianmadrid.dev",
+    url: "https://fabian-photography.vercel.app",
     siteName: "Fabian Photography",
     locale: "en_US",
     type: "website",
