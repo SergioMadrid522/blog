@@ -1,4 +1,21 @@
-import { Links, SocialMedia } from "./types";
+import type { Links, SocialMedia, Picture } from "./types";
+/* import images */
+import img1 from "@/assets/images/img1.webp";
+import img2 from "@/assets/images/img2.webp";
+import img3 from "@/assets/images/img3.webp";
+import img4 from "@/assets/images/img4.webp";
+import img5 from "@/assets/images/img5.webp";
+import img6 from "@/assets/images/img6.webp";
+import img7 from "@/assets/images/img7.webp";
+import img8 from "@/assets/images/img8.webp";
+import img9 from "@/assets/images/img9.webp";
+import img10 from "@/assets/images/img10.webp";
+import img11 from "@/assets/images/img11.webp";
+import img12 from "@/assets/images/img12.webp";
+import img13 from "@/assets/images/img13.webp";
+import img14 from "@/assets/images/img14.webp";
+import img15 from "@/assets/images/img15.webp";
+import img16 from "@/assets/images/img16.webp";
 
 export const GLOBAL = {
   hamburgerIcon:
@@ -21,7 +38,7 @@ export const quickLinks: Links[] = [
   { label: "Contact", pageUrl: "#contact" },
 ];
 
-export const socialMedia: Array<SocialMedia> = [
+export const socialMedia: SocialMedia[] = [
   {
     name: "Instagram",
     link: "https://www.instagram.com/fabian.1103",
@@ -33,5 +50,56 @@ export const socialMedia: Array<SocialMedia> = [
     link: "",
     svgPath:
       "M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951",
+  },
+];
+
+export const breakpointColumnsObj = {
+  default: 4,
+  1280: 3,
+  768: 2,
+  640: 1,
+};
+
+export const recentPictures: Picture[] = [
+  { id: 1, src: img1, title: "Lost at Sea", location: "Altamira, Mexico" },
+  { id: 2, src: img2, title: "The Observer", location: "Altamira, Mexico" },
+  { id: 3, src: img3, title: "Last Light", location: "Altamira, Mexico" },
+  { id: 4, src: img4, title: "Steel Skeleton", location: "Tampico, Mexico" },
+  { id: 5, src: img5, title: "The Assembly", location: "Altamira, Mexico" },
+  {
+    id: 6,
+    src: img6,
+    title: "into the void",
+    location: "Altamira, Mexico",
+  },
+  { id: 7, src: img7, title: "On Fire", location: "Altamira, Mexico" },
+  { id: 8, src: img8, title: "Airbone", location: "Altamira, Mexico" },
+  {
+    id: 9,
+    src: img9,
+    title: "Forgotten Shores",
+    location: "Altamira, Mexico",
+  },
+];
+
+export const gallery: Picture[] = [
+  { id: 1, src: img1, title: "Lost at Sea", location: "Altamira, Mexico" },
+  { id: 2, src: img2, title: "The Observer", location: "Altamira, Mexico" },
+  { id: 3, src: img3, title: "Last Light", location: "Altamira, Mexico" },
+  { id: 4, src: img4, title: "Steel Skeleton", location: "Tampico, Mexico" },
+  { id: 5, src: img5, title: "The Assembly", location: "Altamira, Mexico" },
+  {
+    id: 6,
+    src: img6,
+    title: "into the void",
+    location: "Altamira, Mexico",
+  },
+  { id: 7, src: img7, title: "On Fire", location: "Altamira, Mexico" },
+  { id: 8, src: img8, title: "Airbone", location: "Altamira, Mexico" },
+  {
+    id: 9,
+    src: img9,
+    title: "Forgotten Shores",
+    location: "Altamira, Mexico",
   },
 ];

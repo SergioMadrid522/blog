@@ -1,7 +1,9 @@
+import HomeGallery from "@/components/gallery/HomeGallery";
+
 export default function AllFiles() {
   return (
     <>
-      <h1>all my work</h1>
+      <HomeGallery />
     </>
   );
 }

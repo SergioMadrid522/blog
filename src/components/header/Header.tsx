@@ -52,25 +52,25 @@ export default function Header() {
               hover:bg-[#ededed]/60 hover:text-black transition-all duration-350
             "
             href="/gallery"
+            prefetch={false}
           >
             All Gallery
           </Link>
         </div>
 
-        <Link
-          href="#recent-pictures"
-          className="absolute bottom-0 left-0 w-full flex justify-center"
-        >
-          <div className="-translate-y-50 flex flex-col items-center">
-            <p className="font-sans font-bold text-[16px] text-[#edededc5] italic tracking-[0.25em] my-2">
-              Recent Pictures
-            </p>
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 -translate-y-50">
+          <Link href="#recent-pictures">
+            <div className="flex flex-col items-center cursor-pointer">
+              <p className="font-sans font-bold text-[16px] text-[#edededc5] italic tracking-[0.25em] my-2">
+                Recent Pictures
+              </p>
 
-            <div className="animate-bounce will-change-transform">
-              <ChevronDownIcon />
+              <div className="animate-bounce will-change-transform">
+                <ChevronDownIcon />
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type Links = {
   label: string;
   pageUrl: string;
@@ -17,3 +19,10 @@ export type ModalProps = {
 export type LinkProps = {
   handleClick?: () => void;
 };
+
+export interface Picture {
+  id: number;
+  src: StaticImageData;
+  title: string;
+  location: string;
+}
