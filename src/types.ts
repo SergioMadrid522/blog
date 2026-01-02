@@ -8,3 +8,12 @@ export interface SocialMedia {
   link: string;
   svgPath: string;
 }
+
+export type ModalProps = {
+  isOpen: boolean;
+  handleClick: () => void;
+};
+
+export type LinkProps = {
+  handleClick?: () => void;
+};
