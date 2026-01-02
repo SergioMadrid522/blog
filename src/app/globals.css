@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+/* * {
+  outline: 1px solid red;
+} */
 :root {
   --background: #0a0a0a;
   --inactive-link: #525252;

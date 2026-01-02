@@ -1,3 +1,10 @@
 export type Links = {
   label: string;
+  pageUrl: string;
 };
+
+export interface SocialMedia {
+  name: string;
+  link: string;
+  svgPath: string;
+}
