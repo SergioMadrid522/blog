@@ -7,19 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Aquí definimos tus fuentes personalizadas
-      fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        serif: ["var(--font-playfair)", "serif"],
+      animation: {
+        "bounce-soft": "bounceSoft 1.2s ease-in-out infinite",
       },
-      // Aquí definimos tu paleta "Dark Luxury"
-      colors: {
-        background: "#0a0a0a", // Fondo principal (Gris casi negro)
-        surface: "#171717", // Fondo tarjetas/modales
-        primary: "#ededed", // Texto principal (Blanco roto)
-        secondary: "#a3a3a3", // Texto secundario (Gris medio)
-        muted: "#525252", // Texto terciario (Gris oscuro)
-        accent: "#d4b572", // Dorado Champagne
+      keyframes: {
+        bounceSoft: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
       },
     },
   },
