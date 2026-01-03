@@ -32,7 +32,7 @@ export default function Modal({ isOpen, handleClick }: ModalProps) {
                 height="35"
                 fill="currentColor"
                 viewBox="0 0 16 16"
-                className=""
+                aria-label="Close navegation menu"
               >
                 <path fillRule="evenodd" d={closeIcon} />
               </svg>

@@ -55,6 +55,7 @@ export default function Navbar() {
             width="35"
             height="35"
             fill="currentColor"
+            aria-label="Open navegation menu"
             viewBox="0 0 16 16"
             className=""
           >

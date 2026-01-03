@@ -3,10 +3,9 @@ import HomeMain from "@/components/homeMain/HomeMain";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Header />
-
       <HomeMain />
-    </>
+    </main>
   );
 }

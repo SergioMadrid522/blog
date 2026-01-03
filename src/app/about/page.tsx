@@ -4,7 +4,7 @@ import SocialMedia from "@/components/footer/SocialMedia";
 
 export default function About() {
   return (
-    <section
+    <main
       className="
       flex flex-col 
       lg:flex-row 
@@ -53,6 +53,6 @@ export default function About() {
           <SocialMedia />
         </div>
       </div>
-    </section>
+    </main>
   );
 }
