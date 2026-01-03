@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Great_Vibes, Inter, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
@@ -16,7 +18,17 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+/* const kallinsha = localFont({
+  src: "../assets/fonts/Kallinsha.otf",
+  weight: "400",
+  style: "normal",
+  variable: "--font-signature",
+  display: "swap",
+}); */
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fabian-photography.vercel.app"),
+
   title: {
     default: "Silent Beauty | Photography by Fabian",
     template: "%s | Fabian Photography",
@@ -33,7 +45,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/src/assets/page-logo-website.webp",
+        url: "../assets/page-logo-website.webp",
         width: 1200,
         height: 630,
         alt: "Silent Beauty Portfolio",

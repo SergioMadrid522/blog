@@ -7,14 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        "bounce-soft": "bounceSoft 1.2s ease-in-out infinite",
-      },
-      keyframes: {
-        bounceSoft: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
-        },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-playfair)", "serif"],
+        signature: ["SignatureManual", "sans-serif"],
       },
     },
   },

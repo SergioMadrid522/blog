@@ -27,13 +27,13 @@ export const GLOBAL = {
 };
 
 export const navbarLinks: Links[] = [
-  { label: "Portfolio", pageUrl: "/" },
+  { label: "Portfolio", pageUrl: "/gallery" },
   { label: "About", pageUrl: "/about" },
   { label: "Contact", pageUrl: "#contact" },
 ];
 
 export const quickLinks: Links[] = [
-  { label: "Portfolio", pageUrl: "/" },
+  { label: "Portfolio", pageUrl: "/gallery" },
   { label: "About me", pageUrl: "/about" },
   { label: "Contact", pageUrl: "#contact" },
 ];

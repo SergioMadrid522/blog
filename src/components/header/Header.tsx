@@ -5,7 +5,7 @@ import ChevronDownIcon from "./ChevronDownIcon";
 
 export default function Header() {
   return (
-    <div className="relative w-full h-[100svh] overflow-hidden">
+    <div className="relative w-full h-[100svh] overflow-hidden" id="home">
       <Image
         src={banner}
         alt="Blog Gallery banner"

@@ -30,9 +30,21 @@ export default function Footer() {
           </p>
         </div>
 
-        <Links />
+        <div className="flex flex-col items-center md:items-start gap-2">
+          <p className="font-serif text-2xl text-[#ededed] mb-3 md:mb-3">
+            Quick Links
+          </p>
 
-        <SocialMedia />
+          <Links />
+        </div>
+
+        <div>
+          <p className="font-serif text-2xl text-[#ededed] mb-3 md:mb-3">
+            Follow me
+          </p>
+
+          <SocialMedia />
+        </div>
       </section>
       <section className="border-t border-t-white/20">
         <div className="text-center p-5">
