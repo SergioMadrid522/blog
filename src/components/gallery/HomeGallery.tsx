@@ -13,12 +13,13 @@ export default function HomeGallery() {
         columnClassName="flex flex-col gap-4"
       >
         {gallery.map(({ id, src, title }) => (
-          <div key={id}>
+          <div key={id} className="relative">
             <Image
               src={src}
               alt={title}
-              className="rounded-xl w-full"
               placeholder="blur"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="rounded-xl w-full h-auto object-cover"
             />
           </div>
         ))}
