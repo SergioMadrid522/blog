@@ -28,3 +28,17 @@ export interface Picture {
   title: string;
   location: string;
 }
+
+export type PhotoDetailsProps = {
+  params: {
+    id: string;
+  };
+};
+
+export interface RenderImageProps {
+  photo: {
+    id: number;
+    src: StaticImageData;
+    title: string;
+  };
+}

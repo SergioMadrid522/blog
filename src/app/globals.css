@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "SignatureManual";
   src: url("/fonts/Kallinsha.otf") format("opentype");
