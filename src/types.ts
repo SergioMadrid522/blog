@@ -14,10 +14,12 @@ export interface SocialMedia {
 export type ModalProps = {
   isOpen: boolean;
   handleClick: () => void;
+  username?: string | null;
 };
 
 export type LinkProps = {
   handleClick?: () => void;
+  username?: string | null;
 };
 
 export interface Picture {
