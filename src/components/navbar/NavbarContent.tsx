@@ -25,7 +25,7 @@ export default function NavbarContent({
         fixed
         top-0 left-0
         flex items-center justify-between 
-        px-4 md:px-7.5 lg:px-6.5
+        px-15 lg:px-30
         py-8 
         bg-linear-to-b from-black/60 via-black/30 to-transparent/20
         w-full md:w-full
