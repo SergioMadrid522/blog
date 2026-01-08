@@ -24,10 +24,11 @@ export default function NavbarContent({
       className="
         fixed
         top-0 left-0
-        flex items-center justify-between
-        px-8 py-8 md:px-30
+        flex items-center justify-between 
+        px-4 md:px-7.5 lg:px-6.5
+        py-8 
         bg-linear-to-b from-black/60 via-black/30 to-transparent/20
-        w-full
+        w-full md:w-full
         z-1
       "
     >

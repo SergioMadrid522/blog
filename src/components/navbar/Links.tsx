@@ -30,11 +30,11 @@ export default function Links({ username, handleClick }: LinkProps) {
             font-sans font-bold uppercase tracking-widest 
             mb-4 md:mb-0 md:mr-6
             flex items-center gap-2
-            cursor-default select-none
+            cursor-pointer
         "
         >
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-          {username}
+          <Link href="/api/auth/signout">{username}</Link>
         </div>
       )}
     </>
