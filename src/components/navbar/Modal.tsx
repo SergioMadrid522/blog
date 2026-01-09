@@ -4,7 +4,7 @@ import type { ModalProps } from "@/types";
 import Links from "./Links";
 import { GLOBAL } from "@/data";
 
-export default function Modal({ isOpen, handleClick }: ModalProps) {
+export default function Modal({ isOpen, handleClick, username }: ModalProps) {
   const { closeIcon } = GLOBAL;
 
   return (
@@ -21,7 +21,7 @@ export default function Modal({ isOpen, handleClick }: ModalProps) {
               bg-linear-to-b from-black/80 via-black to-black/65
             "
           >
-            <Links handleClick={handleClick} />
+            <Links handleClick={handleClick} username={username} />
           </div>
 
           <div className="absolute right-8 md:hidden items-center">

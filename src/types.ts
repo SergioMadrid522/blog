@@ -14,10 +14,12 @@ export interface SocialMedia {
 export type ModalProps = {
   isOpen: boolean;
   handleClick: () => void;
+  username?: string | null;
 };
 
 export type LinkProps = {
   handleClick?: () => void;
+  username?: string | null;
 };
 
 export interface Picture {
@@ -25,4 +27,18 @@ export interface Picture {
   src: StaticImageData;
   title: string;
   location: string;
+}
+
+export type PhotoDetailsProps = {
+  params: {
+    id: string;
+  };
+};
+
+export interface RenderImageProps {
+  photo: {
+    id: number;
+    src: StaticImageData;
+    title: string;
+  };
 }

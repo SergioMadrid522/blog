@@ -3,6 +3,7 @@
 import { breakpointColumnsObj, gallery } from "@/data";
 import Masonry from "react-masonry-css";
 import Image from "next/image";
+import SeeDetailsLink from "../utils/SeeDetailsLink";
 
 export default function HomeGallery() {
   return (
@@ -13,7 +14,7 @@ export default function HomeGallery() {
         columnClassName="flex flex-col gap-4"
       >
         {gallery.map(({ id, src, title }) => (
-          <div key={id} className="relative">
+          <div key={id} className="group relative overflow-hidden">
             <Image
               src={src}
               alt={title}
@@ -21,6 +22,8 @@ export default function HomeGallery() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-xl w-full h-auto object-cover"
             />
+
+            <SeeDetailsLink id={id} />
           </div>
         ))}
       </Masonry>

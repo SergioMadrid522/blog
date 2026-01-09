@@ -1,9 +1,7 @@
 "use client";
 
-import Masonry from "react-masonry-css";
-import Image from "next/image";
-import { breakpointColumnsObj, recentPictures } from "@/data";
 import Link from "next/link";
+import RecentImages from "./RecentImages";
 
 export default function HomeMain() {
   return (
@@ -11,22 +9,7 @@ export default function HomeMain() {
       id="recent-pictures"
       className="w-full px-4 md:px-8 py-20 bg-[#0a0a0a]"
     >
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="flex gap-4"
-        columnClassName="flex flex-col gap-4"
-      >
-        {recentPictures.map(({ id, src, title }) => (
-          <div key={id}>
-            <Image
-              src={src}
-              alt={title}
-              className="rounded-xl w-full"
-              placeholder="blur"
-            />
-          </div>
-        ))}
-      </Masonry>
+      <RecentImages />
 
       <div className="flex items-center justify-center h-10 p-10">
         <Link
