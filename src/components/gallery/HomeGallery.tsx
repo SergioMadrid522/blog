@@ -1,9 +1,10 @@
 "use client";
 
-import { breakpointColumnsObj, gallery } from "@/data";
+import { breakpointColumnsObj } from "@/data";
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 import SeeDetailsLink from "../utils/SeeDetailsLink";
+import { gallery } from "@/data.gallery";
 
 export default function HomeGallery() {
   return (

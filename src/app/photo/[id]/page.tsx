@@ -1,5 +1,6 @@
 import RenderImage from "@/components/photoDetails/RenderImage";
-import { gallery, GLOBAL } from "@/data";
+import { GLOBAL } from "@/data";
+import { gallery } from "@/data.gallery";
 import { PhotoDetailsProps } from "@/types";
 
 import { notFound } from "next/navigation";
