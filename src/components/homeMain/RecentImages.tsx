@@ -1,4 +1,5 @@
-import { breakpointColumnsObj, recentPictures } from "@/data";
+import { breakpointColumnsObj } from "@/data";
+import { recentPictures } from "@/data.gallery";
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 import SeeDetailsLink from "../utils/SeeDetailsLink";
