@@ -14,7 +14,7 @@ export default function HomeGallery() {
         className="flex gap-4"
         columnClassName="flex flex-col gap-4"
       >
-        {gallery.map(({ id, src, title }) => (
+        {gallery.map(({ id, src, title, slug }) => (
           <div key={id} className="group relative overflow-hidden">
             <Image
               src={src}
@@ -23,8 +23,7 @@ export default function HomeGallery() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-xl w-full h-auto object-cover"
             />
-
-            <SeeDetailsLink id={id} />
+            <SeeDetailsLink slug={slug} />
           </div>
         ))}
       </Masonry>

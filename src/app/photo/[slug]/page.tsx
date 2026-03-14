@@ -6,10 +6,10 @@ import { PhotoDetailsProps } from "@/types";
 import { notFound } from "next/navigation";
 
 export default async function PhotoDetails({ params }: PhotoDetailsProps) {
-  const { id } = await params;
-  const photo = gallery.find((photo) => photo.id === Number(id));
+  const { slug } = await params;
   const { locationIcon } = GLOBAL;
-
+  const photo = gallery.find((photo) => photo.slug === slug);
+  console.log(slug);
   if (!photo) notFound();
 
   return (

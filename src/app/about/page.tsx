@@ -33,9 +33,8 @@ export default function About() {
 
         <p className="text-[18px] py-3 max-w-xl text-center lg:text-left">
           Photography is not just about capturing light; it&apos;s about
-          capturing silence. Based in Mexico, I specialize in finding the quiet
-          elegance hidden within chaotic urban landscapes and vast natural
-          sceneries.
+          capturing silence. I specialize in finding the quiet elegance hidden
+          within chaotic urban landscapes sceneries.
         </p>
 
         <p className="text-[18px] py-3 max-w-xl text-center lg:text-left">

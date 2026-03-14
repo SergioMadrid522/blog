@@ -24,6 +24,7 @@ export type LinkProps = {
 
 export interface Picture {
   id: number;
+  slug: string;
   src: StaticImageData;
   title: string;
   location: string;
@@ -31,7 +32,7 @@ export interface Picture {
 
 export type PhotoDetailsProps = {
   params: {
-    id: string;
+    slug: string;
   };
 };
 
