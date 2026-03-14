@@ -1,8 +1,9 @@
 import { breakpointColumnsObj } from "@/data";
-import { recentPictures } from "@/data.gallery";
+
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 import SeeDetailsLink from "../utils/SeeDetailsLink";
+import { recentPictures } from "@/data.gallery";
 
 export default function RecentImages() {
   return (
@@ -11,7 +12,7 @@ export default function RecentImages() {
       className="flex gap-4"
       columnClassName="flex flex-col gap-4"
     >
-      {recentPictures.map(({ id, src, title }) => (
+      {recentPictures.map(({ id, src, title, slug }) => (
         <div key={id} className="group relative overflow-hidden">
           <Image
             src={src}
@@ -20,7 +21,7 @@ export default function RecentImages() {
             placeholder="blur"
           />
 
-          <SeeDetailsLink id={id} />
+          <SeeDetailsLink slug={slug} />
         </div>
       ))}
     </Masonry>

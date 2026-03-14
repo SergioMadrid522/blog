@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default function SeeDetailsLink({ id }: { id: number }) {
+export default function SeeDetailsLink({ slug }: { slug: string }) {
+  console.log(slug);
   return (
     <div
       className="
@@ -13,7 +14,7 @@ export default function SeeDetailsLink({ id }: { id: number }) {
         transition-opacity duration-200"
     >
       <Link
-        href={`/photo/${id}`}
+        href={`/photo/${slug}`}
         className="font-sans font-bold text-2xl md:text-xl"
       >
         See Details
