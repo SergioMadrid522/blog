@@ -25,9 +25,10 @@ export type LinkProps = {
 export interface Picture {
   id: number;
   slug: string;
-  src: StaticImageData;
+  src: StaticImageData | string;
   title: string;
   location: string;
+  blurimgurl?: string;
 }
 
 export type PhotoDetailsProps = {
@@ -39,7 +40,7 @@ export type PhotoDetailsProps = {
 export interface RenderImageProps {
   photo: {
     id: number;
-    src: StaticImageData;
+    src: StaticImageData | string;
     title: string;
   };
 }

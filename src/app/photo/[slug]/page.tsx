@@ -9,7 +9,7 @@ export default async function PhotoDetails({ params }: PhotoDetailsProps) {
   const { slug } = await params;
   const { locationIcon } = GLOBAL;
   const photo = gallery.find((photo) => photo.slug === slug);
-  console.log(slug);
+
   if (!photo) notFound();
 
   return (

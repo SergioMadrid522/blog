@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export default function SeeDetailsLink({ slug }: { slug: string }) {
-  console.log(slug);
   return (
     <div
       className="

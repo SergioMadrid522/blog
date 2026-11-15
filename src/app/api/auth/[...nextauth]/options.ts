@@ -17,7 +17,7 @@ export const authOptions: NextAuthOptions = {
         console.log(
           "Variables de entorno (Server):",
           process.env.ADMIN_USER,
-          process.env.ADMIN_PASS
+          process.env.ADMIN_PASS,
         );
         if (
           credentials?.username === process.env.ADMIN_USER &&
