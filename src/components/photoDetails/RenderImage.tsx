@@ -3,7 +3,6 @@ import Image from "next/image";
 
 export default function RenderImage({ photo }: RenderImageProps) {
   const verticalPhotos = [4, 5, 6];
-
   return (
     <>
       {verticalPhotos.includes(photo.id) ? (
@@ -11,6 +10,8 @@ export default function RenderImage({ photo }: RenderImageProps) {
           <Image
             src={photo.src}
             alt={photo.title}
+            width={4320}
+            height={3240}
             className="object-cover rounded-xl w-full"
             priority
           />
@@ -20,6 +21,8 @@ export default function RenderImage({ photo }: RenderImageProps) {
           <Image
             src={photo.src}
             alt={photo.title}
+            width={4320}
+            height={3240}
             className="object-cover rounded-xl w-full"
             priority
           />
