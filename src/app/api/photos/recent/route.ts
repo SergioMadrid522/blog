@@ -1,38 +1,22 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getVisitorToken } from "@/lib/visitor";
-import { Prisma } from "@prisma/client";
-
-const recentPhotosQuery = {
-  orderBy: {
-    createdAt: "desc",
-  },
-  take: 10,
-  include: {
-    _count: {
-      select: {
-        likes: true,
-      },
-    },
-    likes: {
-      where: {
-        visitorToken: "",
-      },
-      select: {
-        id: true,
-      },
-    },
-  },
-} satisfies Prisma.PhotoFindManyArgs;
 
 export async function GET() {
   try {
     const visitorToken = await getVisitorToken();
 
     const photos = await prisma.photo.findMany({
-      ...recentPhotosQuery,
+      orderBy: {
+        createdAt: "desc",
+      },
+      take: 10,
       include: {
-        ...recentPhotosQuery.include,
+        _count: {
+          select: {
+            likes: true,
+          },
+        },
         likes: {
           where: {
             visitorToken,
@@ -44,10 +28,17 @@ export async function GET() {
       },
     });
 
-    const formattedPhotos = photos.map(({ _count, likes, ...photo }) => ({
-      ...photo,
-      likesCount: _count.likes,
-      liked: likes.length > 0,
+    const formattedPhotos = photos.map((photo) => ({
+      id: photo.id,
+      slug: photo.slug,
+      src: photo.src,
+      title: photo.title,
+      location: photo.location,
+      blurImgUrl: photo.blurImgUrl,
+      createdAt: photo.createdAt,
+      updatedAt: photo.updatedAt,
+      likesCount: photo._count.likes,
+      liked: photo.likes.length > 0,
     }));
 
     return NextResponse.json(formattedPhotos);
