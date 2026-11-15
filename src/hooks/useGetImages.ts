@@ -26,14 +26,13 @@ export function useGetImages() {
       if (!data) {
         throw new Error("There's no any iamges to show");
       }
-      console.log(data);
       setData(data);
     } catch (error) {
       const message =
         error instanceof Error
           ? error.message
           : "An unexpected error occurred.";
-      console.log(message);
+
       setError(message);
     } finally {
       setLoading(false);

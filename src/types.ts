@@ -48,11 +48,14 @@ export type PhotoDetailsProps = {
 } */
 
 export type Photo = {
+  id: number;
   title: string;
   location: string;
   src: string;
   slug: string;
   blurImgUrl: string;
+  likesCount: number;
+  liked: boolean;
 };
 
 export type RenderImageProps = {
@@ -61,4 +64,20 @@ export type RenderImageProps = {
 
 export interface RouteContext {
   params: Promise<{ slug: string }>;
+}
+
+export interface LikeButtonProps {
+  photoId: number;
+  initialLiked: boolean;
+  initialLikesCount: number;
+  className?: string;
+}
+
+export interface SeeDetailsLinkProps {
+  slug: string;
+  data: {
+    id: number;
+    liked: boolean;
+    likesCount: number;
+  };
 }

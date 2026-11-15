@@ -3,10 +3,11 @@ import { useGetImage } from "@/hooks/useGetImage";
 import { RenderImageProps } from "@/types";
 import Image from "next/image";
 import { GLOBAL } from "@/icons.data";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import LikeButton from "../utils/LikeButton";
 
 export default function RenderImageClient({ slug }: RenderImageProps) {
-  const { locationIcon } = GLOBAL;
+  const { locationIcon, heart, filledHeart } = GLOBAL;
   const { loading, error, data, fetchData } = useGetImage();
 
   useEffect(() => {
@@ -50,6 +51,14 @@ export default function RenderImageClient({ slug }: RenderImageProps) {
               {data.location}
             </p>
           </div>
+
+          <LikeButton
+            key={data.id}
+            photoId={data.id}
+            initialLiked={data.liked}
+            initialLikesCount={data.likesCount}
+            className="mt-8"
+          />
         </aside>
       </section>
     </main>

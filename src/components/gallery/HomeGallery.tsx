@@ -48,8 +48,8 @@ export default function HomeGallery() {
         className="flex gap-4"
         columnClassName="flex flex-col gap-4"
       >
-        {data.map(({ src, title, slug, blurImgUrl }) => (
-          <div key={title} className="group relative overflow-hidden">
+        {data.map(({ id, src, title, slug, blurImgUrl, likesCount, liked }) => (
+          <div key={id} className="group relative overflow-hidden">
             <Image
               src={src}
               alt={title}
@@ -60,7 +60,7 @@ export default function HomeGallery() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-xl w-full h-auto object-cover"
             />
-            <SeeDetailsLink slug={slug} />
+            <SeeDetailsLink slug={slug} data={{ id, likesCount, liked }} />
           </div>
         ))}
       </Masonry>

@@ -29,7 +29,6 @@ model User {
   name  String
   email String @unique
 
-  likes    Like[]
   comments Comment[]
 
   createdAt DateTime @default(now())
@@ -40,15 +39,14 @@ model User {
 model Like {
   id Int @id @default(autoincrement())
 
-  photoId Int
-  userId  Int
+  photoId      Int
+  visitorToken String
 
   photo Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
-  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
 
-  @@unique([photoId, userId])
+  @@unique([photoId, visitorToken])
   @@index([photoId])
   @@map("likes")
 }
