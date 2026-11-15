@@ -43,7 +43,7 @@ export async function GET() {
 
     return NextResponse.json(formattedPhotos);
   } catch (error) {
-    console.error("Error fetching recent photos:", error);
+    console.error("Error fetching recent photos: ", error);
 
     return NextResponse.json(
       { error: "Failed to fetch recent photos" },
