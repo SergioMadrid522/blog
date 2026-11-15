@@ -1,22 +1,38 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getVisitorToken } from "@/lib/visitor";
+import { Prisma } from "@prisma/client";
+
+const recentPhotosQuery = {
+  orderBy: {
+    createdAt: "desc",
+  },
+  take: 10,
+  include: {
+    _count: {
+      select: {
+        likes: true,
+      },
+    },
+    likes: {
+      where: {
+        visitorToken: "",
+      },
+      select: {
+        id: true,
+      },
+    },
+  },
+} satisfies Prisma.PhotoFindManyArgs;
 
 export async function GET() {
   try {
     const visitorToken = await getVisitorToken();
 
     const photos = await prisma.photo.findMany({
-      orderBy: {
-        createdAt: "desc",
-      },
-      take: 10,
+      ...recentPhotosQuery,
       include: {
-        _count: {
-          select: {
-            likes: true,
-          },
-        },
+        ...recentPhotosQuery.include,
         likes: {
           where: {
             visitorToken,
