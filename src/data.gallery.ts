@@ -92,7 +92,7 @@ export const recentPictures: Picture[] = [
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAABcElEQVR4ARyPzWoTYRiFn04nEzBJk05ooFRtuhCN4v21CC5ci3gXbRpEFEXERZrUhRXrDyLqFUiaTGbm+5tkpsPnlyweDrzv4RyOd9j/Yo9Ov9rDFYNv9mjw3T568cM+fvnTPnn9yz5999s+//DHPnv/d61etxWw2wzYD6scOG41fe62fR52fB7sVLjTrtBtbnLQ2uBmDbzALulUr2ltFmtCP6duDX65YKPMKfKc5WKB0Bkqy/FEEjGfRyiRkOmUsliSFwWZMYg0Rri/ShNKI7BLiXd5+Yrz0YDx2QnnZ33Go2MuPr/l08UbRsM+H8fuNjxmPDxxnOJdXU1cw5zpLGIym/FvMmE6jUhiiZQZSapJncapYRaleGH7PmGnx/bOPcJ2j+2wR1DdpRJ0aGzdptHoUt/a50Ztj1p9D08rg9EOp0oql7pilS5QSqGkQIsEoyRaugZtNMqNkzJBG+nGaoxRa7SMnSl2ZuHugvI65z8AAAD//yMwMcAAAAAGSURBVAMA/dXkaDBXjU0AAAAASUVORK5CYII=",
   },
 ];
-
+/* 
 export const gallery: Picture[] = [
   {
     id: 1,
@@ -365,3 +365,4 @@ export const gallery: Picture[] = [
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAABNklEQVR4ARTNPUsCcQCA8ef+Z3qdd5nF5btGIEVQW0VDCI19gz5KS0KLtjS0RENTS5PgENEQDQWiQVSjhliiYEFqL2Z5+s+2Z3jgJ1b2CnJpNyeXU3m5mi7IROpWru3kZSJ5Jde3z+VG8lRups+kMEZsTGHjcdh4nWC4JG5N4HIKdM2F5TWwJkxE3Ogy6+3hd/cZ1xQ8ow7GdCeG/j/pGMYonwMVYalNxmlhqW/8PF3yXcqgdCrobpWeQ6XZh46iIJR+l1r5jmI+Q+v5Ztj3NApHPGa3qF8foH4U8YgmInt8yEPugpd6lUHvC9MJQ5WF0C9hrQGlE9r5fYRpavh9fiKBCNEpH1F/mGhgGtOax5oMEAvGWIzPIWaicUJTAYITbkZUDdvu02p3qDe6vDYF5eo7lVqbPwAAAP//Ex0ddwAAAAZJREFUAwDH92vuLMillwAAAABJRU5ErkJggg==",
   },
 ];
+ */
