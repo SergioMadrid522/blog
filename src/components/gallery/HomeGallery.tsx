@@ -19,26 +19,21 @@ export default function HomeGallery() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center gap-2">
-        <svg
-          className="animate-spin h-5 w-5"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <SpinIcon />
-        </svg>
-        <span>Loading images...</span>
+      <div className="flex flex-col gap-5 items-center justify-center h-dvh">
+        <span className="font-sans uppercase text-2xl md:text-3xl lg:text-4xl text-[#a3a3a3] leading-[0.9]">
+          Loading images...
+        </span>
+        <SpinIcon />
       </div>
     );
   }
 
-  if (error) {
-    return <p>Error loading images: {error}</p>;
+  if (!data) {
+    return <div className="flex items-center justify-center h-dvh" />;
   }
 
-  if (!data) {
-    return <p>No images found.</p>;
+  if (error) {
+    return <p>Error loading images: {error}</p>;
   }
 
   return (

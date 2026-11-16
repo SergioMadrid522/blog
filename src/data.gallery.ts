@@ -1,6 +1,6 @@
 import type { Picture } from "@/types.ts";
 
-export const recentPictures: Picture[] = [
+/* export const recentPictures: Picture[] = [
   {
     id: 1,
     slug: "birds-in-the-horizon",
@@ -91,7 +91,7 @@ export const recentPictures: Picture[] = [
     blurimgurl:
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAABcElEQVR4ARyPzWoTYRiFn04nEzBJk05ooFRtuhCN4v21CC5ci3gXbRpEFEXERZrUhRXrDyLqFUiaTGbm+5tkpsPnlyweDrzv4RyOd9j/Yo9Ov9rDFYNv9mjw3T568cM+fvnTPnn9yz5999s+//DHPnv/d61etxWw2wzYD6scOG41fe62fR52fB7sVLjTrtBtbnLQ2uBmDbzALulUr2ltFmtCP6duDX65YKPMKfKc5WKB0Bkqy/FEEjGfRyiRkOmUsliSFwWZMYg0Rri/ShNKI7BLiXd5+Yrz0YDx2QnnZ33Go2MuPr/l08UbRsM+H8fuNjxmPDxxnOJdXU1cw5zpLGIym/FvMmE6jUhiiZQZSapJncapYRaleGH7PmGnx/bOPcJ2j+2wR1DdpRJ0aGzdptHoUt/a50Ztj1p9D08rg9EOp0oql7pilS5QSqGkQIsEoyRaugZtNMqNkzJBG+nGaoxRa7SMnSl2ZuHugvI65z8AAAD//yMwMcAAAAAGSURBVAMA/dXkaDBXjU0AAAAASUVORK5CYII=",
   },
-];
+]; */
 /* 
 export const gallery: Picture[] = [
   {
