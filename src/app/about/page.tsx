@@ -1,5 +1,4 @@
 import Image from "next/image";
-import me from "@/assets/images/me.webp";
 import SocialMedia from "@/components/footer/SocialMedia";
 
 export default function About() {
@@ -18,11 +17,14 @@ export default function About() {
     >
       <div className="flex items-center justify-center w-full">
         <Image
-          src={me}
+          src="https://res.cloudinary.com/dlhd0iosj/image/upload/v1794784216/46CE5E94-80B8-46C9-B785-C84378105B9E_1_105_c_gt0uv9.jpg"
           alt="Photo of Fabian"
           priority
+          width={768}
+          height={1024}
           sizes="(min-width: 1024px) 500px, 400px"
           className="rounded-[10px] w-[400px] md:w-[500px] object-cover"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAYAAACJxx+AAAAA+klEQVR4AVSQO8qDUBCFT25eEBICIdiKjZUrsXAn7sZNWNsLliKooGJhpfisRLDwff//3i7FMDAz38w5Q+q6plmW0TRNeS7LkkZRRC3LoqZpUjLPM9Z1xTRNPPq+R1EUOI4Dy7KAXC4XfD4fvF4vnE4nxHGM+/2Ofd+xbRtI27YYxxHP5xOu6yIMQ04ymm0muq7DMAw4joMkSZDn+e+AqqqQJIkXb7cb2ElKKc/X6xVEURSIoojv9wtZluH7PqqqAmsyLYSpZgSjbdvGMAx8W9M0OJ/PIEwgIQTMrud5XPnj8UDXdfj/CYggCNw/s6VpGrfMgPf7jSAI8AcAAP//U+wMpwAAAAZJREFUAwDuG5thOLET6wAAAABJRU5ErkJggg=="
         />
       </div>
 

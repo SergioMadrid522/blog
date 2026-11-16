@@ -1,4 +1,6 @@
 import { StaticImageData } from "next/image";
+import { z } from "zod";
+import { uploadValidation } from "./app/api/photos/schema/upload";
 
 export type Links = {
   label: string;
@@ -37,10 +39,45 @@ export type PhotoDetailsProps = {
   };
 };
 
-export interface RenderImageProps {
+/* export interface RenderImageProps {
   photo: {
     id: number;
     src: StaticImageData | string;
     title: string;
+  };
+} */
+
+export type Photo = {
+  id: number;
+  title: string;
+  location: string;
+  src: string;
+  slug: string;
+  blurImgUrl: string;
+  likesCount: number;
+  liked: boolean;
+};
+
+export type RenderImageProps = {
+  slug: string;
+};
+
+export interface RouteContext {
+  params: Promise<{ slug: string }>;
+}
+
+export interface LikeButtonProps {
+  photoId: number;
+  initialLiked: boolean;
+  initialLikesCount: number;
+  className?: string;
+}
+
+export interface SeeDetailsLinkProps {
+  slug: string;
+  data: {
+    id: number;
+    liked: boolean;
+    likesCount: number;
   };
 }

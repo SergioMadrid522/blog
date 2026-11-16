@@ -1,43 +1,13 @@
-import RenderImage from "@/components/photoDetails/RenderImage";
-import { GLOBAL } from "@/data";
-import { gallery } from "@/data.gallery";
-import { PhotoDetailsProps } from "@/types";
-
+import RenderImageClient from "@/components/photoDetails/RenderImageClient";
+import type { PhotoDetailsProps } from "@/types";
 import { notFound } from "next/navigation";
 
 export default async function PhotoDetails({ params }: PhotoDetailsProps) {
   const { slug } = await params;
-  const { locationIcon } = GLOBAL;
-  const photo = gallery.find((photo) => photo.slug === slug);
 
-  if (!photo) notFound();
+  if (!slug) {
+    return notFound();
+  }
 
-  return (
-    <main className="w-full px-4 md:px-8 py-22 bg-[#0a0a0a]">
-      <section className="flex flex-wrap items-center justify-evenly gap-10">
-        <RenderImage photo={photo} />
-
-        <aside className="text-center">
-          <h1 className="font-serif uppercase text-4xl md:text-5xl lg:text-6xl text-[#ededed] leading-[0.9] tracking-tight mb-6">
-            {photo.title}
-          </h1>
-
-          <div className="flex items-center justify-center gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="#a3a3a3"
-              viewBox="0 0 16 16"
-            >
-              <path d={locationIcon} />
-            </svg>
-            <p className="font-sans text-[20px] text-[#a3a3a3]">
-              {photo.location}
-            </p>
-          </div>
-        </aside>
-      </section>
-    </main>
-  );
+  return <RenderImageClient slug={slug} />;
 }

@@ -1,18 +1,38 @@
-import { breakpointColumnsObj } from "@/data";
+"use client";
 
+import { breakpointColumnsObj } from "@/data";
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 import SeeDetailsLink from "../utils/SeeDetailsLink";
-import { recentPictures } from "@/data.gallery";
+import { useEffect } from "react";
+import { useGetRecentImages } from "@/hooks/useGetRecentImages";
 
 export default function RecentImages() {
+  const { loading, error, data, fetchData } = useGetRecentImages();
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  if (loading) {
+    return <p>Loading photos...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  if (!data || data.length === 0) {
+    return <p>No recent photos found.</p>;
+  }
+
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
       className="flex gap-4"
       columnClassName="flex flex-col gap-4"
     >
-      {recentPictures.map(({ id, src, title, slug, blurimgurl }) => (
+      {data.map(({ id, src, title, slug, blurImgUrl, likesCount, liked }) => (
         <div key={id} className="group relative overflow-hidden">
           <Image
             src={src}
@@ -21,10 +41,17 @@ export default function RecentImages() {
             width={1200}
             height={800}
             placeholder="blur"
-            blurDataURL={blurimgurl}
+            blurDataURL={blurImgUrl}
           />
 
-          <SeeDetailsLink slug={slug} />
+          <SeeDetailsLink
+            slug={slug}
+            data={{
+              id,
+              liked,
+              likesCount,
+            }}
+          />
         </div>
       ))}
     </Masonry>
