@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import LikeButton from "../utils/LikeButton";
 
 export default function RenderImageClient({ slug }: RenderImageProps) {
-  const { locationIcon, heart, filledHeart } = GLOBAL;
+  const { locationIcon, circleSpin: SpinIcon } = GLOBAL;
   const { loading, error, data, fetchData } = useGetImage();
 
   useEffect(() => {
@@ -15,15 +15,22 @@ export default function RenderImageClient({ slug }: RenderImageProps) {
   }, [fetchData, slug]);
 
   if (loading) {
-    return <p>Loading photo...</p>;
+    return (
+      <div className="flex flex-col gap-5 items-center justify-center h-dvh">
+        <span className="font-sans uppercase text-[20px] md:text-3xl lg:text-2xl text-[#a3a3a3] leading-[0.9]">
+          Loading images...
+        </span>
+        <SpinIcon />
+      </div>
+    );
+  }
+
+  if (!data) {
+    return <div className="flex items-center justify-center h-dvh" />;
   }
 
   if (error) {
     return <p>{error}</p>;
-  }
-
-  if (!data) {
-    return <p>Photo not found.</p>;
   }
 
   return (
